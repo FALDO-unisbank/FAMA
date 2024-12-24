@@ -36,6 +36,10 @@ class UserController extends Controller
             }
         }
 
+        $user->update([
+            'password' => $request->password,
+        ]);
+
         return redirect()->back()->with('success', 'Berhasil!');
     }
 }
