@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('user', [UserController::class, 'index']);
 Route::post('edituser', [UserController::class, 'edit']);
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class, 'index']);

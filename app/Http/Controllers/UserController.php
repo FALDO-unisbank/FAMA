@@ -36,6 +36,6 @@ class UserController extends Controller
             }
         }
 
-        return redirect()->back()->with('success', 'User Berhasil diupdate!');
+        return redirect()->back()->with('success', 'Berhasil!');
     }
 }
