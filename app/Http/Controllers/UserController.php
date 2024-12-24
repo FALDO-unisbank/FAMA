@@ -37,7 +37,7 @@ class UserController extends Controller
         }
 
         $user->update([
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
         ]);
 
         return redirect()->back()->with('success', 'Berhasil!');
